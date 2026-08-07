@@ -1,8 +1,6 @@
 name: Upstream Build App
 
 on:
-  schedule:
-    - cron: '30 * * * *'
   pull_request:
     paths:
       - install.sh
@@ -46,7 +44,6 @@ on:
       - scripts/lib/linux-features.js
       - computer-use-linux/src/bin/codex-chrome-extension-host.rs
       - linux-features/**
-      - .github/workflows/upstream-build-app.yml
   workflow_dispatch:
 
 permissions:
